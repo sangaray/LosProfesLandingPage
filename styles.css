@@ -9,6 +9,7 @@ body {
 	height: 200dvh;
 	width: 100dvw;
 	overflow-x: hidden;
+	z-index: -1;
 }
 
 /* prettier-ignore */
@@ -22,7 +23,6 @@ body, div, ul, li, a, h1, h2, h3, h4, p, header, nav {
 	background-color: #98fb98bb; /* Verde Menta */
 	z-index: 10;
 	margin: auto;
-	padding: 5px;
 	box-shadow: 0 0 25px 0 #155315;
 }
 
@@ -50,8 +50,17 @@ body, div, ul, li, a, h1, h2, h3, h4, p, header, nav {
 	font-weight: 900;
 }
 
+.header__nav-item:hover {
+	background-color: #155315;
+	box-shadow: 0 0 5px 0 #155315;
+}
+
+.header__nav-item a:hover {
+	color: #98fb98;
+}
+
 .nav__logo {
-	width: 150px;
+	width: 100px;
 	border: 2px solid #1a831a;
 	border-radius: 10px;
 	border-style: double;
@@ -66,7 +75,7 @@ body, div, ul, li, a, h1, h2, h3, h4, p, header, nav {
 	display: grid;
 	grid-template-columns: 50% 50%;
 	align-items: center;
-	gap: 10;
+	column-gap: 20px;
 }
 
 .portada img {
@@ -79,13 +88,20 @@ body, div, ul, li, a, h1, h2, h3, h4, p, header, nav {
 	font-size: 400%;
 	text-align: center;
 	text-wrap: pretty;
+	width: 100%;
+	animation: aparecer 2s repeat;
 }
 
-.header__nav-item:hover {
-	background-color: #155315;
-	box-shadow: 0 0 5px 0 #155315;
+.portada__text-texto:first-child {
+	background-color: #1553152a;
+	border-radius: 15px;
 }
 
-.header__nav-item a:hover {
-	color: #98fb98;
+@keyframes aparecer {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 100%;
+	}
 }
