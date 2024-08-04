@@ -3,10 +3,10 @@
 }
 
 body {
-	background-color: #add8e6; /* Azul Claro */
+	background: linear-gradient(45deg, #90daf3, #e9e31e);
 	color: #155315;
 	font-family: montserrat;
-	height: 200dvh;
+	height: 100dvh;
 	width: 100dvw;
 	overflow-x: hidden;
 	z-index: -1;
@@ -89,19 +89,9 @@ body, div, ul, li, a, h1, h2, h3, h4, p, header, nav {
 	text-align: center;
 	text-wrap: pretty;
 	width: 100%;
-	animation: aparecer 2s repeat;
 }
 
 .portada__text-texto:first-child {
 	background-color: #1553152a;
 	border-radius: 15px;
-}
-
-@keyframes aparecer {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 100%;
-	}
 }
