@@ -4,7 +4,7 @@
 
 body {
 	background-color: #add8e6; /* Azul Claro */
-	color: #000000; /* Negro para el texto */
+	color: #155315;
 	font-family: montserrat;
 	height: 200dvh;
 	width: 100dvw;
@@ -19,9 +19,11 @@ body, div, ul, li, a, h1, h2, h3, h4, p, header, nav {
 }
 
 .header {
-	background-color: #98fb985d; /* Verde Menta */
+	background-color: #98fb98bb; /* Verde Menta */
 	z-index: 10;
 	margin: auto;
+	padding: 5px;
+	box-shadow: 0 0 25px 0 #155315;
 }
 
 .header__nav-container {
@@ -29,12 +31,61 @@ body, div, ul, li, a, h1, h2, h3, h4, p, header, nav {
 	justify-content: space-between;
 	align-items: center;
 	z-index: 20;
+	padding: 10px;
 }
 
 .header__nav-ul {
 	display: flex;
+	list-style: none;
+}
+
+.header__nav-item {
+	padding: 5px 15px;
+	border-radius: 5px;
+}
+
+.header__nav-item a {
+	text-decoration: none;
+	color: #155315;
+	font-weight: 900;
 }
 
 .nav__logo {
 	width: 150px;
+	border: 2px solid #1a831a;
+	border-radius: 10px;
+	border-style: double;
+	margin: 5px 0;
+}
+
+.portada {
+	width: 90%;
+	margin: auto;
+	padding: 20px;
+	padding-top: 50px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	align-items: center;
+	gap: 10;
+}
+
+.portada img {
+	mix-blend-mode: darken;
+	width: 100%;
+	border-radius: 15px;
+}
+
+.portada__text-texto {
+	font-size: 400%;
+	text-align: center;
+	text-wrap: pretty;
+}
+
+.header__nav-item:hover {
+	background-color: #155315;
+	box-shadow: 0 0 5px 0 #155315;
+}
+
+.header__nav-item a:hover {
+	color: #98fb98;
 }
