@@ -7,24 +7,34 @@ body {
 	color: #000000; /* Negro para el texto */
 	font-family: montserrat;
 	height: 200dvh;
+	width: 100dvw;
+	overflow-x: hidden;
 }
 
 /* prettier-ignore */
-body, div, ul, li, a, h1, h2, h3, h4, p {
+body, div, ul, li, a, h1, h2, h3, h4, p, header, nav {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+
 }
 
 .header {
 	background-color: #98fb985d; /* Verde Menta */
-	display: flex;
-	justify-content: center;
 	z-index: 10;
+	margin: auto;
 }
 
 .header__nav-container {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	z-index: 20;
+}
+
+.header__nav-ul {
+	display: flex;
+}
+
+.nav__logo {
+	width: 150px;
 }
