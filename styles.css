@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #add8e6; /* Azul Claro */
+	color: #000000; /* Negro para el texto */
+	font-family: montserrat;
+	height: 200dvh;
+}
+
+/* prettier-ignore */
+body, div, ul, li, a, h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.header {
+	background-color: #98fb985d; /* Verde Menta */
+	display: flex;
+	justify-content: center;
+	z-index: 10;
+}
+
+.header__nav-container {
+	display: flex;
+	justify-content: space-between;
+	z-index: 20;
+}
