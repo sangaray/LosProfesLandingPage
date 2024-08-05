@@ -5,11 +5,12 @@
 body {
 	background: linear-gradient(45deg, #90daf3, #e9e31e);
 	color: #155315;
-	font-family: montserrat;
+	font-family: montserrat, sans-serif;
 	height: 100dvh;
-	width: 100dvw;
+	width: 100vw;
 	overflow-x: hidden;
-	z-index: -1;
+	margin: 0;
+	padding: 0;
 }
 
 /* prettier-ignore */
@@ -20,18 +21,19 @@ body, div, ul, li, a, h1, h2, h3, h4, p, header, nav {
 }
 
 .header {
-	background-color: #98fb98bb; /* Verde Menta */
+	width: 100%;
+	background-color: #98fb98bb;
 	z-index: 10;
-	margin: auto;
 	box-shadow: 0 0 25px 0 #155315;
+	padding: 10px 0;
 }
 
 .header__nav-container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	z-index: 20;
-	padding: 10px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 .header__nav-ul {
@@ -68,12 +70,12 @@ body, div, ul, li, a, h1, h2, h3, h4, p, header, nav {
 }
 
 .portada {
-	width: 90%;
+	width: 100%;
+	max-width: 1200px;
 	margin: auto;
-	padding: 20px;
-	padding-top: 50px;
+	padding: 118px 20px 20px;
 	display: grid;
-	grid-template-columns: 50% 50%;
+	grid-template-columns: 1fr 1fr;
 	align-items: center;
 	column-gap: 20px;
 }
@@ -81,11 +83,12 @@ body, div, ul, li, a, h1, h2, h3, h4, p, header, nav {
 .portada img {
 	mix-blend-mode: darken;
 	width: 100%;
+	max-width: 500px;
 	border-radius: 15px;
 }
 
 .portada__text-texto {
-	font-size: 400%;
+	font-size: 5vw;
 	text-align: center;
 	text-wrap: pretty;
 	width: 100%;
@@ -94,4 +97,44 @@ body, div, ul, li, a, h1, h2, h3, h4, p, header, nav {
 .portada__text-texto:first-child {
 	background-color: #1553152a;
 	border-radius: 15px;
+	padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.header__nav-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.header__nav-ul {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.header__nav-item {
+		padding: 10px;
+	}
+
+	.portada {
+		grid-template-columns: 1fr;
+		padding: 0 100px;
+		width: 100vw;
+		row-gap: 30px;
+	}
+
+	.portada__text-texto {
+		font-size: 5vw;
+	}
+
+	.portada img {
+		mix-blend-mode: darken;
+		border-radius: 15px;
+		width: 100%;
+	}
 }
